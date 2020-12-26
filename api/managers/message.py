@@ -2,14 +2,14 @@ from functools import lru_cache
 import logging
 from typing import Union
 from fastapi import WebSocket
-from api.models.game import Game
+from api.models.room import Room
 from aiocache import cached
 from .connection import WebSocketConnectionManager
 
 
 logger = logging.getLogger("api")
 
-Message = Game
+Message = Room
 
 
 class MessageManager:

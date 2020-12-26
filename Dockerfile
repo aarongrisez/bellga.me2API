@@ -7,4 +7,4 @@ COPY ./poetry.lock .
 ENV PATH="/root/.poetry/bin:${PATH}"
 RUN poetry install
 EXPOSE 80
-CMD ["poetry", "run", "uvicorn", "api.main:app", "--reload", "--host", "0.0.0.0", "--port", "80"]
+CMD ["poetry", "run", "uvicorn", "api:app", "--reload", "--host", "0.0.0.0", "--port", "80"]
